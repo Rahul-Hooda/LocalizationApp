@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">LocalizationApp</string>
+    <string name="invalid_data">Invalid Data</string>
+
+    <!-- Language Names -->
+    <string name="lang_english">English</string>
+    <string name="lang_chinese">Chinese</string>
+    <string name="lang_hindi">Hindi</string>
+    <string name="lang_urdu">Urdu</string>
+
+    <!-- Language Translations -->
+    <string name="hello_world_chinese">你好，世界</string>
+    <string name="hello_world_hindi">नमस्ते दुनिया</string>
+    <string name="hello_world_english">Hello World</string>
+    <string name="hello_world_urdu">سلام دنیا</string>
+
+</resources>

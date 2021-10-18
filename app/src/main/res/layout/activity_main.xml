@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.rh.localizationapp.viewModel.LocalizationViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tvHelloWorld"
+            style="@style/textViewStyle"
+            android:text="@string/hello_world_english" />
+
+        <LinearLayout
+            style="@style/linearLayoutStyle"
+            android:layout_below="@id/tvHelloWorld">
+
+            <Button
+                style="@style/buttonStyle"
+                android:onClick="@{(view) -> viewModel.updateText(@string/lang_english, @string/hello_world_english)}"
+                android:text="@string/lang_english" />
+
+            <Button
+                style="@style/buttonStyle"
+                android:onClick="@{(view) -> viewModel.updateText(@string/lang_chinese, @string/hello_world_chinese)}"
+                android:text="@string/lang_chinese" />
+
+            <Button
+                style="@style/buttonStyle"
+                android:onClick="@{(view) -> viewModel.updateText(@string/lang_hindi, @string/hello_world_hindi)}"
+                android:text="@string/lang_hindi" />
+
+            <Button
+                style="@style/buttonStyle"
+                android:onClick="@{(view) -> viewModel.updateText(@string/lang_urdu, @string/hello_world_urdu)}"
+                android:text="@string/lang_urdu" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>
