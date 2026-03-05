@@ -9,11 +9,11 @@ import com.rh.localizationapp.model.LocalizationManager
 class LocalizationViewModel(application: Application): AndroidViewModel(application) {
 
     var helloWorldText: MutableLiveData<String> = MutableLiveData()
-    val applicationContext = application
+    val myApplicationContext = application
 
     fun updateText(langName: String, fallbackValue: String){
         if (langName.isEmpty() || fallbackValue.isEmpty())
-            helloWorldText.value = applicationContext.getString(R.string.invalid_data)
-        helloWorldText.value = LocalizationManager.getValue(applicationContext,langName,fallbackValue)
+            helloWorldText.value = myApplicationContext.getString(R.string.invalid_data)
+        helloWorldText.value = LocalizationManager.getValue(myApplicationContext,langName,fallbackValue)
     }
 }
