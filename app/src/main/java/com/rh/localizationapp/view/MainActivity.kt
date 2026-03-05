@@ -28,7 +28,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initViewModel() {
-
         mViewModel = ViewModelProvider(this).get(LocalizationViewModel::class.java)
         binding.viewModel = mViewModel
     }
